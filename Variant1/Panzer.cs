@@ -23,8 +23,8 @@ namespace Variant1
         public void PClear()
         {
             Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
-            g.FillEllipse(new SolidBrush(Form1.DefaultBackColor), CoordPX, CoordPY, Width, Height);
-            g.FillEllipse(new SolidBrush(Form1.DefaultBackColor), CoordPX + 2, CoordPY - 2, Height, Height);
+            g.FillEllipse(new SolidBrush(Form1.ActiveForm.BackColor), CoordPX, CoordPY, Width, Height);
+            g.FillEllipse(new SolidBrush(Form1.ActiveForm.BackColor), CoordPX + 2, CoordPY - 2, Height, Height);
         }
         public Panzer()
         {
