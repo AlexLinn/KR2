@@ -9,34 +9,31 @@ namespace Variant1
 {
     class Panzer
     {
-        public int CoordPX;
-        public int CoordPY;
+        public int CoordX;
+        public int CoordY;
         private int Width = 8;
         private int Height = 4;
-        public void PShow()
+        public void Show()
         {
             Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
-            g.FillEllipse(new SolidBrush(Color.DarkBlue), CoordPX, CoordPY, Width, Height);
-            g.FillEllipse(new SolidBrush(Color.DarkBlue), CoordPX + 2, CoordPY - 2, Height, Height);
-
+            g.FillEllipse(new SolidBrush(Color.DarkBlue), Convert.ToInt32(Convert.ToDouble(CoordX) / Program.mstb)-4, CoordY-1, Width, Height);
+            g.FillEllipse(new SolidBrush(Color.DarkBlue), Convert.ToInt32(Convert.ToDouble(CoordX) / Program.mstb) -2, CoordY -3 , Height, Height);
         }
-        public void PClear()
+        public void Clear()
         {
             Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
-            g.FillEllipse(new SolidBrush(Form1.ActiveForm.BackColor), CoordPX, CoordPY, Width, Height);
-            g.FillEllipse(new SolidBrush(Form1.ActiveForm.BackColor), CoordPX + 2, CoordPY - 2, Height, Height);
+            g.FillEllipse(new SolidBrush(Form1.ActiveForm.BackColor), Convert.ToInt32(Convert.ToDouble(CoordX) / Program.mstb)-4, CoordY-1, Width, Height);
+            g.FillEllipse(new SolidBrush(Form1.ActiveForm.BackColor), Convert.ToInt32(Convert.ToDouble(CoordX) / Program.mstb) -2, CoordY -3 , Height, Height);
+            
         }
         public Panzer()
         {
 
-            CoordPX = 0;
-            CoordPY = 0;
         }
         public Panzer(int x, int y)
         {
-
-            CoordPX = x;
-            CoordPY = y;
+            CoordX = x;
+            CoordY = y;
         }
 
 

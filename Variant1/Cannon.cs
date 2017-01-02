@@ -9,28 +9,28 @@ namespace Variant1
 {
     class Cannon
     {
-        public int CoordCX;
-        public int CoordCY;
+        public int CoordX;
+        public int CoordY;
         private int Width = 10;
         private int Height = 5;
 
-        public void CShow()
+        public void Show()
         {
             Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
-            g.FillRectangle(new SolidBrush(Color.Yellow), CoordCX, CoordCY - Height, Width, Height);
-            g.FillRectangle(new SolidBrush(Color.Blue), CoordCX, CoordCY, Width, Height);
+            g.FillRectangle(new SolidBrush(Color.Yellow), CoordX, CoordY - Height, Width, Height);
+            g.FillRectangle(new SolidBrush(Color.Blue), CoordX, CoordY, Width, Height);
 
         }
-        public void CClear()
+        public void Clear()
         {
             Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
-            g.FillRectangle(new SolidBrush(Form1.ActiveForm.BackColor), CoordCX, CoordCY - Height, Width, Height * 2);
+            g.FillRectangle(new SolidBrush(Form1.ActiveForm.BackColor), CoordX, CoordY - Height, Width, Height * 2);
         }
         public Cannon()
         {
 
-            CoordCX = 0;
-            CoordCY = 0;
+            CoordX = 0;
+            CoordY = 0;
         }
     }
 }
