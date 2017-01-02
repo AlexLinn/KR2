@@ -11,8 +11,8 @@ namespace Variant1
     {
         public int CoordX;
         public int CoordY;
-        private int Width = 10;
-        private int Height = 5;
+        private int Width = 8;
+        private int Height = 4;
 
         public void Show()
         {

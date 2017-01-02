@@ -30,11 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -48,19 +44,19 @@
             this.changePanzerLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button4 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSpeed = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownAngle = new System.Windows.Forms.NumericUpDown();
             this.StatusBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAngle)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 31);
+            this.label1.Location = new System.Drawing.Point(8, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
@@ -75,56 +71,18 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Angle";
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(54, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(189, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(65, 20);
-            this.textBox2.TabIndex = 3;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(292, 28);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(276, 31);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 20);
             this.button1.TabIndex = 4;
-            this.button1.Text = "FIRE !!!";
+            this.button1.Text = "FIRE!";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(484, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 20);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Cannon";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button3.Location = new System.Drawing.Point(610, 65);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 21);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // StatusBar
             // 
@@ -225,56 +183,61 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(610, 28);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 19);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Relief";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(11, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "label3";
+            this.label3.Text = " ";
             // 
-            // button5
+            // numericUpDownSpeed
             // 
-            this.button5.Location = new System.Drawing.Point(610, 103);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(101, 20);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Generate";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.numericUpDownSpeed.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.numericUpDownSpeed.DecimalPlaces = 2;
+            this.numericUpDownSpeed.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.numericUpDown1.Location = new System.Drawing.Point(54, 54);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownSpeed.Location = new System.Drawing.Point(55, 31);
+            this.numericUpDownSpeed.Maximum = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(68, 20);
-            this.numericUpDown1.TabIndex = 12;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDownSpeed.Name = "numericUpDownSpeed";
+            this.numericUpDownSpeed.Size = new System.Drawing.Size(63, 20);
+            this.numericUpDownSpeed.TabIndex = 12;
+            this.numericUpDownSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownSpeed.Value = new decimal(new int[] {
             50,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownAngle
+            // 
+            this.numericUpDownAngle.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.numericUpDownAngle.DecimalPlaces = 1;
+            this.numericUpDownAngle.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownAngle.Location = new System.Drawing.Point(188, 31);
+            this.numericUpDownAngle.Maximum = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            this.numericUpDownAngle.Name = "numericUpDownAngle";
+            this.numericUpDownAngle.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownAngle.TabIndex = 13;
+            this.numericUpDownAngle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownAngle.Value = new decimal(new int[] {
+            30,
             0,
             0,
             0});
@@ -285,17 +248,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(802, 456);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.numericUpDownAngle);
+            this.Controls.Add(this.numericUpDownSpeed);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.StatusBar);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MainMenuStrip = this.menuStrip1;
@@ -313,7 +271,8 @@
             this.StatusBar.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAngle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,11 +282,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -338,13 +293,12 @@
         private System.Windows.Forms.ToolStripMenuItem changePanzerLocationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         public System.Windows.Forms.StatusStrip StatusBar;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownSpeed;
+        private System.Windows.Forms.NumericUpDown numericUpDownAngle;
     }
 }
 
