@@ -261,7 +261,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(639, 37);
+            this.label4.Location = new System.Drawing.Point(256, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 26);
             this.label4.TabIndex = 14;
@@ -287,7 +287,8 @@
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Танк и пушка";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);

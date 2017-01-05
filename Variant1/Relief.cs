@@ -38,16 +38,18 @@ namespace Variant1
         }
         public void Clear()  // Удалаяет нарисованый рельеф с формы
         {
-            Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
-            for (int i = 1; i <= Program.MaxDistance / Program.mstb; i++)
-            {
-                Point pt1 = new Point(i - 1, Program.h_start - ReliefHeight[Convert.ToInt32((i - 1) * Program.mstb)]);
-                Point pt2 = new Point(i, Program.h_start - ReliefHeight[Convert.ToInt32(i * Program.mstb)]);
-                g.DrawLine(new Pen(Form1.ActiveForm.BackColor), pt1, pt2);
+            if (Visible){
+                Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
+                for (int i = 1; i <= Program.MaxDistance / Program.mstb; i++)
+                {
+                    Point pt1 = new Point(i - 1, Program.h_start - ReliefHeight[Convert.ToInt32((i - 1) * Program.mstb)]);
+                    Point pt2 = new Point(i, Program.h_start - ReliefHeight[Convert.ToInt32(i * Program.mstb)]);
+                    g.DrawLine(new Pen(Form1.ActiveForm.BackColor), pt1, pt2);
+                }
+                Point P0 = new Point(0, Program.h_start);
+                Point P1 = new Point(2500, Program.h_start);
+                g.DrawLine(new Pen(Form1.ActiveForm.BackColor), P0, P1);
             }
-            Point P0 = new Point(0, Program.h_start);
-            Point P1 = new Point(2500, Program.h_start);
-            g.DrawLine(new Pen(Form1.ActiveForm.BackColor), P0, P1);
             Visible = false;
         }
         public void ReBuild()  // Расчитывает новый рельеф

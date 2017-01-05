@@ -22,9 +22,9 @@ namespace Variant1
     
         public bool Show()
         {
-            double t = 0, time_fly = 0;
+            double  time_fly = 0;
             int dy = Program.h_start, dx = 0, D_X = 0;
-            bool bababah = false;
+            
             Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
             
             Point pt1 = new Point(0, Program.h_start);
@@ -52,7 +52,9 @@ namespace Variant1
             if (Form1.Panzer1.CoordX - 3 < dx*Program.mstb && dx*Program.mstb < Form1.Panzer1.CoordX+3) {
                 return true;
             }
+            Form1.Panzer1.Show();
             return false;
+            
             
             
         }
@@ -62,7 +64,7 @@ namespace Variant1
             if (Visible)
             {
                 Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
-                double t = 0, time_fly = 0;
+                double  time_fly = 0;
                 int dy = Program.h_start, dx = 0, D_X = 0;
                 Point pt1 = new Point(0, Program.h_start);
                 for (dx = 1; dx <= Program.MaxDistance / Program.mstb; dx++)
