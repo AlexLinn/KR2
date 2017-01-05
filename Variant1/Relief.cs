@@ -8,16 +8,16 @@ using System.Drawing;
 
 namespace Variant1
 {
-    class  Relief
+    public class Relief
     {
-         // масштаб, м/пиксель
-        private bool Visible;  
-        private int [] ReliefHeight = new int[Program.MaxDistance + 1]; 
+        // масштаб, м/пиксель
+        private bool Visible;
+        private int[] ReliefHeight = new int[Program.MaxDistance + 1];
         public Relief()
         {
             ReBuild();
         }
-        public int RHeight(int x) // Возвращает дельту высоты в заданной координету Х.
+        public int RHeight(int x) // Возвращает дельту высоты в заданной координате Х.
         {
             return ReliefHeight[x];
         }
@@ -27,12 +27,12 @@ namespace Variant1
             Point P0 = new Point(0, Program.h_start);
             Point P1 = new Point(2500, Program.h_start);
             g.DrawLine(new Pen(Color.White), P0, P1);
-            int    h= Program.h_start;
-            for ( int i= 1; i <= Program.MaxDistance/ Program.mstb; i++)
+            int h = Program.h_start;
+            for (int i = 1; i <= Program.MaxDistance / Program.mstb; i++)
             {
-                Point pt1 = new Point(i-1, Program.h_start - ReliefHeight[Convert.ToInt32((i-1)* Program.mstb)]);
-                Point pt2 = new Point(i, Program.h_start - ReliefHeight[Convert.ToInt32( i* Program.mstb)]);
-                g.DrawLine(new Pen(Color.GreenYellow), pt1,pt2);
+                Point pt1 = new Point(i - 1, Program.h_start - ReliefHeight[Convert.ToInt32((i - 1) * Program.mstb)]);
+                Point pt2 = new Point(i, Program.h_start - ReliefHeight[Convert.ToInt32(i * Program.mstb)]);
+                g.DrawLine(new Pen(Color.GreenYellow), pt1, pt2);
             }
             Visible = true;
         }
@@ -41,7 +41,7 @@ namespace Variant1
             Graphics g = Variant1.Form1.ActiveForm.CreateGraphics();
             for (int i = 1; i <= Program.MaxDistance / Program.mstb; i++)
             {
-                Point pt1 = new Point(i-1, Program.h_start - ReliefHeight[Convert.ToInt32((i-1) * Program.mstb)]);
+                Point pt1 = new Point(i - 1, Program.h_start - ReliefHeight[Convert.ToInt32((i - 1) * Program.mstb)]);
                 Point pt2 = new Point(i, Program.h_start - ReliefHeight[Convert.ToInt32(i * Program.mstb)]);
                 g.DrawLine(new Pen(Form1.ActiveForm.BackColor), pt1, pt2);
             }

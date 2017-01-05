@@ -38,6 +38,7 @@
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeReliefToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDownSpeed = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownAngle = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.StatusBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).BeginInit();
@@ -83,6 +85,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "FIRE!";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StatusBar
             // 
@@ -133,15 +136,24 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newGameToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            // 
+            // newGameToolStripMenuItem
+            // 
+            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newGameToolStripMenuItem.Text = "New game";
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -195,12 +207,12 @@
             // numericUpDownSpeed
             // 
             this.numericUpDownSpeed.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.numericUpDownSpeed.DecimalPlaces = 2;
+            this.numericUpDownSpeed.DecimalPlaces = 1;
             this.numericUpDownSpeed.Increment = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
-            131072});
+            65536});
             this.numericUpDownSpeed.Location = new System.Drawing.Point(55, 31);
             this.numericUpDownSpeed.Maximum = new decimal(new int[] {
             200,
@@ -216,6 +228,7 @@
             0,
             0,
             0});
+            this.numericUpDownSpeed.ValueChanged += new System.EventHandler(this.numericUpDownSpeed_ValueChanged_1);
             // 
             // numericUpDownAngle
             // 
@@ -241,6 +254,19 @@
             0,
             0,
             0});
+            this.numericUpDownAngle.ValueChanged += new System.EventHandler(this.numericUpDownAngle_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(639, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 26);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "VICTORY!";
+            this.label4.Visible = false;
             // 
             // Form1
             // 
@@ -248,6 +274,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(802, 456);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDownAngle);
             this.Controls.Add(this.numericUpDownSpeed);
             this.Controls.Add(this.label3);
@@ -299,6 +326,8 @@
         public System.Windows.Forms.StatusStrip StatusBar;
         private System.Windows.Forms.NumericUpDown numericUpDownSpeed;
         private System.Windows.Forms.NumericUpDown numericUpDownAngle;
+        private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
+        public System.Windows.Forms.Label label4;
     }
 }
 

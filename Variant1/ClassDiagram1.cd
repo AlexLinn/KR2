@@ -1,66 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Variant1.Cannon">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAEAAAAQAAAAABAAAA=</HashCode>
       <FileName>Cannon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Variant1.Form1">
-    <Position X="2.25" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
+    <Position X="2.5" Y="0.5" Width="3" />
     <TypeIdentifier>
-      <HashCode>BaCABAQAECwEABACAAGCAAACAMg4AAgAUHQMAIgAASA=</HashCode>
+      <HashCode>BYCABAQAECxkABACAAGCAAACgAgIAAigQGUAAIoBASA=</HashCode>
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Variant1.Panzer">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAEAAAAQAAAAABAAAA=</HashCode>
       <FileName>Panzer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Variant1.Program">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="10" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAE=</HashCode>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAABAABAAE=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Variant1.Relief">
-    <Position X="5.75" Y="4.5" Width="1.5" />
+    <Position X="6.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAUAAAIACAAAABBAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAIACAAAABAAAI=</HashCode>
       <FileName>Relief.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Variant1.Properties.Resources">
-    <Position X="0.5" Y="4.5" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Variant1.Properties.Settings" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+  <Class Name="Variant1.Properties.Settings">
+    <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Variant1.Traectory">
-    <Position X="7.5" Y="4.5" Width="1.5" />
+    <Position X="8" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAEAAAAAEAAAABAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAABAAAEAAAIAEAAAABAAAA=</HashCode>
       <FileName>Traectory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Variant1.Explosion">
-    <Position X="9.25" Y="4.5" Width="1.5" />
+    <Position X="9.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Explosion.cs</FileName>
     </TypeIdentifier>
   </Class>

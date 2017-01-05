@@ -12,11 +12,14 @@ using System.Windows.Forms;
 namespace Variant1
 {
     
+
     public partial class Form1 : Form
     {
-        Relief Relief1 = new Relief();
+        public static Relief Relief1 = new Relief();
         Cannon Cannon1 = new Cannon();
-        Panzer Panzer1 = new Panzer();
+        public static Panzer Panzer1 = new Panzer();
+        public static Explosion Explosion1 = new Explosion();
+        Traectory Traectory1 = new Traectory();
         public int h_start=0;
         
         public Form1()
@@ -57,6 +60,8 @@ namespace Variant1
             Cannon1.CoordY = Program.h_start;
             Cannon1.CoordX = 0;
             Cannon1.Show();
+            Traectory1.Speed = Convert.ToDouble(numericUpDownSpeed.Value);
+            Traectory1.Angle = Convert.ToDouble(numericUpDownAngle.Value);
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e) // About program
@@ -80,6 +85,7 @@ namespace Variant1
             Relief1.Clear();
             Panzer1.Clear();
             Cannon1.Clear();
+            Traectory1.Clear();
             Program.h_start = ActiveForm.Height - 250;
             Program.mstb = Convert.ToDouble(Program.MaxDistance) / Convert.ToDouble(ActiveForm.Width);
             Panzer1.CoordY = Program.h_start - Relief1.RHeight(Panzer1.CoordX);
@@ -90,6 +96,7 @@ namespace Variant1
             StatusBar.Items[3].Text = " Panzer: X= " + Panzer1.CoordX + ", Y= " + Panzer1.CoordY;
             Cannon1.CoordY = Program.h_start;
             Cannon1.Show();
+            Traectory1.Show();
         }
 
         private void changePanzerLocationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,6 +123,53 @@ namespace Variant1
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             label3.Text = "X= " + e.X + ", " + Convert.ToInt32(Convert.ToDouble(e.X) * Program.mstb) + " Y=" + Relief1.RHeight(Convert.ToInt32(Convert.ToDouble(e.X) * Program.mstb)) + ", " + e.Y;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool Res = Traectory1.Show( );
+            if (Res)
+            {
+                label4.Visible = true;
+            }
+            
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void numericUpDownAngle_ValueChanged(object sender, EventArgs e)
+        {
+            Traectory1.Clear();
+            Traectory1.Angle = Convert.ToDouble(numericUpDownAngle.Value);
+        }
+
+        private void numericUpDownSpeed_ValueChanged_1(object sender, EventArgs e)
+        {
+            Traectory1.Clear();
+            Traectory1.Speed = Convert.ToDouble(numericUpDownSpeed.Value);
+        }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label4.Visible = false;
+            Traectory1.Clear();
+            Relief1.Clear();
+            Panzer1.Clear();
+            Cannon1.Clear();
+            Relief1.ReBuild();
+            Relief1.Show();
+            Random Distance = new Random();
+            Panzer1.CoordX = Distance.Next(900, Program.MaxDistance);
+            Panzer1.CoordY = Program.h_start - Relief1.RHeight(Panzer1.CoordX);
+            StatusBar.Items[3].Text = " Panzer: X= " + Panzer1.CoordX + ", Y= " + Panzer1.CoordY;
+            Panzer1.Show();
+            Cannon1.Show();
+
         }
     }
     

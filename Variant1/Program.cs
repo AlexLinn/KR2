@@ -7,11 +7,13 @@ using System.Windows.Forms;
 namespace Variant1
 {
     
+
     static class Program
     {
         public const int MaxDistance = 2500;
         public static double mstb=1;
         public static int h_start = 1;
+        
 
         /// <summary>
         /// Главная точка входа для приложения.
